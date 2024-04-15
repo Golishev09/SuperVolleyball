@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="200"
+        x:Class="SuperVolleyball.MainWindow"
+        Icon="../Images/logo.png"
+        Title="SuperVolleyball">
+    
+    
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Label HorizontalAlignment="Center" >Для входа, введите Логин и Пароль</Label>
+        <TextBox Watermark="Логин" Name="LoginTextBox" Width="200">Login</TextBox>
+        <TextBox Watermark="Пароль" Name="PasswordTextBox" Width="200">1234560</TextBox>
+        <Grid>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <RadioButton x:Name="rbOption1" Width="100" Content="Админ" GroupName="Options" Checked="Rb1_Checked"/>
+                <RadioButton x:Name="rbOption2" Content="Менеджер" GroupName="Options" Checked="Rb2_Checked"/>
+            </StackPanel>
+        </Grid>
+        <Button HorizontalAlignment="Center" Click="Login_Btn_Click">Войти</Button>
+
+    </StackPanel>
+</Window>

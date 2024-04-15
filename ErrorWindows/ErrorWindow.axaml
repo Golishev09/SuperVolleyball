@@ -1,0 +1,14 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="310" d:DesignHeight="110"
+        x:Class="SuperVolleyball.ErrorWindows.ErrorWindow"
+        Title="ErrorWindow">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label HorizontalAlignment="Center" >Непредвиденная ошибка</Label>
+        <Label HorizontalAlignment="Center" ></Label>
+        <Label HorizontalAlignment="Center" >Попробуйте снова</Label>
+        <Button HorizontalAlignment="Center" Click="Button_CLose_On_Click" >Ok</Button>
+    </StackPanel>
+</Window>

@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="743" d:DesignHeight="450"
+        x:Class="SuperVolleyball.Windows.TableWindow"
+        Icon="../Images/logo.png"
+        Title="TableWindow">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <ComboBox Name="SortPlayers" SelectionChanged="SortPlayers_OnSelectionChanged">
+                    <ComboBoxItem Name="By_Name"> По Имени </ComboBoxItem>
+                    <ComboBoxItem Name="By_BirthDay"> По Дате рождения </ComboBoxItem>
+                    <ComboBoxItem Name="By_Position"> По позиции </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+                        
+            <DataGrid x:Name = "TableDataGrid"
+                      x:CompileBindings="False"
+                      AutoGenerateColumns = "False"
+                      IsReadOnly="True"
+                      GridLinesVisibility="All"
+                      BorderThickness="3"
+                      BorderBrush="YellowGreen"
+                      Margin="0,0">
+                
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header ="Имя игрока" Binding="{Binding Player_Name_ID}"/>  
+                    <DataGridTextColumn Header= "Позиция" Binding="{Binding Game_Position}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "Вес" Binding="{Binding Player_Weight}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "Рост" Binding="{Binding Player_Height}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "Дата рождения" Binding="{Binding Player_BirthDay}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "Дата начала игры" Binding="{Binding Game_StartTime}"></DataGridTextColumn>
+                    <DataGridTextColumn Header= "Команда" Binding="{Binding Game_Team}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"> Найти игрока: </TextBlock>
+                    <TextBox Name="searchPlayers" Width="200" Margin="10 0 0  0" TextChanged="Teach_search_OnTextChangedOnTextChanged"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Back" Click="Back_OnClick"> Назад </Button>
+                    <Button x:Name="Delete" Click="Delete_OnClick"> Удалить </Button>
+
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
